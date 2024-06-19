@@ -1,0 +1,558 @@
+:root {
+  /* Light Theme */
+  --primary-font: "Poppins", sans-serif;
+  --primary-bg-color: #ffffff;
+  --primary-text-color: #000000;
+  --secondary-color: #575757;
+  --btn-bg-color: #2196f3;
+  --cta-hover-color: #167bce;
+  --btn-bg-light: #eeeeee;
+
+  /* Dark Theme */
+  --dark-primary-bg-color: #222222;
+  --dark-primary-text-color: #ffffff;
+  --dark-secondary-color: #828282;
+  --dark-btn-bg-color: #1e88e5;
+  --dark-cta-hover-color: #0d5e8c;
+  --dark-btn-bg-light: #eeeeee;
+}
+
+.dark-theme {
+  --primary-bg-color: var(--dark-primary-bg-color);
+  --primary-text-color: var(--dark-primary-text-color);
+  --secondary-color: var(--dark-secondary-color);
+  --btn-bg-color: var(--dark-btn-bg-color);
+  --cta-hover-color: var(--dark-cta-hover-color);
+  --btn-bg-light: var(--dark-btn-bg-light);
+}
+
+body {
+  margin: 0;
+  font-family: var(--primary-font, "Arial, sans-serif");
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+}
+
+.theme-btn {
+  position: relative;
+  left: 8.5rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  cursor: default;
+}
+
+article,
+footer,
+.hero,
+.logo-container,
+.experience,
+.cta,
+.portfolio-skills,
+.btn-bg,
+.portfolio,
+.skills {
+  display: flex;
+}
+
+.hero,
+.portfolio,
+.skills {
+  flex-direction: column;
+}
+
+.hero,
+.btn-bg,
+.portfolio,
+.skills {
+  align-items: center;
+}
+
+.hero,
+.experience,
+.wrapper {
+  text-align: center;
+}
+
+article,
+.hero,
+.logo-container,
+.portfolio,
+.skills {
+  gap: 1rem;
+}
+
+.hero-pic {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.inner-circle {
+  content: "";
+  position: absolute;
+  top: 0.1rem; /* Adjust border thickness */
+  left: 0.1rem;
+  bottom: 0.1rem;
+  right: 0.1rem;
+  border-radius: 50%;
+  border: 0.18rem solid var(--primary-bg-color); /* Define your border thickness and color */
+  z-index: 1; /* Make sure it is above the image */
+}
+
+.hero-pic img,
+.wrapper img {
+  width: 100%;
+}
+.hero-pic{
+  height: 15rem;
+  width: 15rem;
+}
+.hero-pic img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+}
+
+.hero-info h1,
+h2 {
+  font-weight: 400;
+}
+
+article p,
+.hero-info h2 {
+  color: var(--secondary-color);
+}
+
+.hero-info h2 {
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+footer,
+.logo-container,
+.experience,
+.cta,
+.portfolio-skills,
+.btn-bg {
+  justify-content: center;
+}
+
+.theme-btn,
+.logo-container a,
+.logo-container img {
+  height: 1.5rem;
+}
+
+.experience {
+  margin: auto;
+  margin-top: 1.4rem;
+  max-width: 20rem;
+}
+
+.experience b {
+  font-weight: 500;
+}
+
+.experience h2 {
+  width: 30%;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.cta {
+  margin-top: 1.2rem;
+}
+
+.cta,
+.btn-bg {
+  gap: 2rem;
+}
+
+.btn,
+.btn-2,
+.btn-bg {
+  border-radius: 0.7rem;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn,
+.btn-2,
+.btn-bg,
+.wrapper h3 {
+  font-weight: 600;
+}
+
+.btn,
+.btn-2,
+.btn-bg,
+.wrapper,
+.project-wrapper {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: var(--cta-hover-color);
+}
+
+.theme-btn,
+.download-btn:hover,
+.contact-btn:hover,
+.btn-2:hover,
+.wrapper img:hover {
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn-2:hover,
+.project-wrapper:hover,
+.logo-container a:hover {
+  transform: scale(0.98);
+}
+
+.btn:active,
+.btn-2:active,
+.project-wrapper:active,
+.logo-container a:active {
+  transform: scale(1);
+}
+
+.contact-btn:hover,
+.download-btn {
+  background-color: var(--btn-bg-color);
+  color: white;
+}
+
+.contact-btn:hover {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-2:hover,
+.active-btn {
+  background-color: white;
+}
+
+.btn,
+.btn-2 {
+  height: 3rem;
+}
+
+.btn {
+  width: 9rem;
+}
+
+.btn-2 {
+  width: 8.5rem;
+}
+
+.download-btn {
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-skills {
+  height: 4rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.btn-bg,
+.wrapper {
+  width: 20rem;
+}
+
+article p,
+.btn-bg {
+  background-color: var(--btn-bg-light);
+}
+
+.hero,
+.portfolio,
+.skills {
+  margin-top: 2rem;
+}
+
+.skills {
+  display: none;
+}
+
+.wrapper img {
+  border-radius: 1rem;
+}
+
+article,
+.wrapper h3 {
+  margin-bottom: 1.5rem;
+}
+
+article {
+  flex-wrap: wrap;
+}
+
+article p {
+  border-radius: 0.5rem;
+  flex-grow: 20;
+  padding: 1rem;
+}
+
+footer {
+  margin: 3rem 0;
+}
+/* CSS for GitHub button inside the project */
+/* CSS for GitHub button inside the project */
+.project {
+  position: relative;
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.github-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--btn-bg-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project:hover img {
+  opacity: 0.3;
+}
+
+.project:hover .github-btn {
+  opacity: 1;
+}
+
+.github-btn:hover {
+  background-color: var(--cta-hover-color);
+}
+
+.github-btn:active {
+  transform: translate(-50%, -50%) scale(0.98);
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 2;
+  pointer-events: none;
+  div {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    div {
+      border: 1px solid #fff;
+      border-radius: 50%;
+      animation: pulse 2.5s linear infinite;
+      box-shadow: 0 0 50px 5px #d7abff6e;
+    }
+  }
+  div:nth-child(1),
+  div:nth-child(2) {
+    width: 100%;
+    height: 100%;
+  }
+  div:nth-child(1) {
+    transition: transform 0.2s ease-out;
+  }
+  div:nth-child(2) {
+    div {
+      background: #fff;
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+    }
+    transition: transform 0.1s ease-out;
+  }
+}
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 2;
+  pointer-events: none;
+  div {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    div {
+      border: 1px solid #fff;
+      border-radius: 50%;
+      animation: pulse 2.5s linear infinite;
+      box-shadow: 0 0 50px 5px var(--btn-bg-color);
+    }
+  }
+  div:nth-child(1),
+  div:nth-child(2) {
+    width: 100%;
+    height: 100%;
+  }
+  div:nth-child(1) {
+    transition: transform 0.2s ease-out;
+  }
+  div:nth-child(2) {
+    div {
+      background: #000;
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+    }
+    transition: transform 0.1s ease-out;
+  }
+}
+
+*[data-animate="true"] {
+  opacity: 0;
+}
+
+.animate-slide-down {
+  animation: slide-down 300ms ease-out forwards;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(var(--slide-translate-y));
+  }
+}
+
+
+@media screen and (min-width: 900px) {
+  .skills,
+  .portfolio {
+    flex-direction: row;
+    width: 45rem;
+  }
+  .skills {
+    margin: 2rem auto 0;
+  }
+  .portfolio {
+    margin: 2rem auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .wrapper {
+    width: calc(48%);
+    flex: none;
+  }
+}
+.skills {
+  display: none; /* Initially hide the skills section */
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.skills.active {
+  display: flex; /* Show the skills section when active */
+}
+
+.wrapper {
+  max-width: 30rem;
+}
+
+.wrapper h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.frontend-skills,
+.backend-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.frontend-skills p,
+.backend-skills p {
+  background-color: var(--btn-bg-light);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.frontend-skills p:hover,
+.backend-skills p:hover {
+  transform: translateY(-5px);
+  color: white;
+  background-color: black;
+}
+
+/* Add these styles to your existing CSS */
+.about {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.about-card {
+  background-color: var(--btn-bg-light);
+  color: var(--primary-text-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 30rem;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.about-card h3 {
+  margin-bottom: 1rem;
+}
+
+.about.active {
+  display: flex;
+}
+
+.dark-theme .about-card {
+  background-color: var(--btn-bg-light);
+  color: var(--dark-primary-bg-color);
+}
+
+
+
+
